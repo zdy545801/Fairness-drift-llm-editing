@@ -67,27 +67,32 @@ def summarize_run(run_dir: Path):
     }
 
 
+def _collect_runs(results_root: Path):
+    run_dirs = []
+    for method_dir in ["FT", "MEMIT", "ROME", "MEND"]:
+        p = results_root / method_dir
+        if not p.exists():
+            continue
+        for child in sorted(p.iterdir()):
+            if child.is_dir() and (child / "rounds").exists():
+                run_dirs.append(child)
+    return run_dirs
+
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--run_dirs",
-        nargs="*",
-        default=[
-            "results/FT/FT_stress_10rounds_20260319",
-            "results/FT/FT_stress_10rounds_20260319_r2",
-            "results/MEMIT/MEMIT_gpt2_ft_compare_10rounds_20260320",
-            "results/MEMIT/MEMIT_gpt2_ft_compare_10rounds_20260320_r2",
-            "results/MEMIT/MEMIT_gpt2_ft_compare_10rounds_20260325_r3_shuffle",
-            "results/ROME/ROME_gpt2_ft_compare_10rounds_20260325",
-            "results/ROME/ROME_gpt2_ft_compare_10rounds_20260325_r2",
-        ],
-    )
+    parser.add_argument("--run_dirs", nargs="*", default=None)
+    parser.add_argument("--results_root", default="results")
     parser.add_argument("--out_csv", default="results/edit_success_summary.csv")
     parser.add_argument("--out_md", default="results/edit_success_summary.md")
     args = parser.parse_args()
 
+    run_dirs = args.run_dirs
+    if not run_dirs:
+        run_dirs = [str(p) for p in _collect_runs(Path(args.results_root))]
+
     rows = []
-    for d in args.run_dirs:
+    for d in run_dirs:
         p = Path(d)
         if not p.exists():
             continue

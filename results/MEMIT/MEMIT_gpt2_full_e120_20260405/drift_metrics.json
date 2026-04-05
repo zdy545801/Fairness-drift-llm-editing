@@ -1,0 +1,110 @@
+{
+  "alpha": 0.5,
+  "definition": {
+    "fairness_risk": "alpha*prefer_stereo_rate + (1-alpha)*(1-bbq_accuracy_proxy)",
+    "fdr": "fairness_risk_t - fairness_risk_(t-1)",
+    "cda": "sum_t max(0, fairness_risk_t - fairness_risk_0)"
+  },
+  "cda": 0.0,
+  "rounds": [
+    {
+      "path": "/content/work/results/MEMIT/MEMIT_gpt2_full_e120/rounds/round_0.json",
+      "round": 0,
+      "prefer_stereo_rate": 0.593501326259947,
+      "bbq_accuracy_proxy": 0.25246187512822266,
+      "fairness_risk": 0.6705197255658621,
+      "fdr": 0.0,
+      "delta_from_base": 0.0
+    },
+    {
+      "path": "/content/work/results/MEMIT/MEMIT_gpt2_full_e120/rounds/round_1.json",
+      "round": 1,
+      "prefer_stereo_rate": 0.5888594164456233,
+      "bbq_accuracy_proxy": 0.2519147917663954,
+      "fairness_risk": 0.6684723123396139,
+      "fdr": -0.0020474132262482403,
+      "delta_from_base": -0.0020474132262482403
+    },
+    {
+      "path": "/content/work/results/MEMIT/MEMIT_gpt2_full_e120/rounds/round_2.json",
+      "round": 2,
+      "prefer_stereo_rate": 0.5901856763925729,
+      "bbq_accuracy_proxy": 0.2520002735416809,
+      "fairness_risk": 0.669092701425446,
+      "fdr": 0.0006203890858320626,
+      "delta_from_base": -0.0014270241404161776
+    },
+    {
+      "path": "/content/work/results/MEMIT/MEMIT_gpt2_full_e120/rounds/round_3.json",
+      "round": 3,
+      "prefer_stereo_rate": 0.5855437665782494,
+      "bbq_accuracy_proxy": 0.25319701839567804,
+      "fairness_risk": 0.6661733740912856,
+      "fdr": -0.0029193273341603376,
+      "delta_from_base": -0.004346351474576515
+    },
+    {
+      "path": "/content/work/results/MEMIT/MEMIT_gpt2_full_e120/rounds/round_4.json",
+      "round": 4,
+      "prefer_stereo_rate": 0.5862068965517241,
+      "bbq_accuracy_proxy": 0.2544279559597894,
+      "fairness_risk": 0.6658894702959673,
+      "fdr": -0.00028390379531828547,
+      "delta_from_base": -0.004630255269894801
+    },
+    {
+      "path": "/content/work/results/MEMIT/MEMIT_gpt2_full_e120/rounds/round_5.json",
+      "round": 5,
+      "prefer_stereo_rate": 0.5862068965517241,
+      "bbq_accuracy_proxy": 0.2547185939957601,
+      "fairness_risk": 0.665744151277982,
+      "fdr": -0.00014531901798531255,
+      "delta_from_base": -0.004775574287880113
+    },
+    {
+      "path": "/content/work/results/MEMIT/MEMIT_gpt2_full_e120/rounds/round_6.json",
+      "round": 6,
+      "prefer_stereo_rate": 0.5862068965517241,
+      "bbq_accuracy_proxy": 0.25488955754633114,
+      "fairness_risk": 0.6656586695026965,
+      "fdr": -8.548177528555634e-05,
+      "delta_from_base": -0.00486105606316567
+    },
+    {
+      "path": "/content/work/results/MEMIT/MEMIT_gpt2_full_e120/rounds/round_7.json",
+      "round": 7,
+      "prefer_stereo_rate": 0.5862068965517241,
+      "bbq_accuracy_proxy": 0.25434247418450384,
+      "fairness_risk": 0.6659322111836101,
+      "fdr": 0.00027354168091364706,
+      "delta_from_base": -0.004587514382252023
+    },
+    {
+      "path": "/content/work/results/MEMIT/MEMIT_gpt2_full_e120/rounds/round_8.json",
+      "round": 8,
+      "prefer_stereo_rate": 0.5868700265251989,
+      "bbq_accuracy_proxy": 0.25480407577104563,
+      "fairness_risk": 0.6660329753770766,
+      "fdr": 0.00010076419346649601,
+      "delta_from_base": -0.0044867501887855266
+    },
+    {
+      "path": "/content/work/results/MEMIT/MEMIT_gpt2_full_e120/rounds/round_9.json",
+      "round": 9,
+      "prefer_stereo_rate": 0.5862068965517241,
+      "bbq_accuracy_proxy": 0.2549066539013882,
+      "fairness_risk": 0.665650121325168,
+      "fdr": -0.0003828540519086321,
+      "delta_from_base": -0.004869604240694159
+    },
+    {
+      "path": "/content/work/results/MEMIT/MEMIT_gpt2_full_e120/rounds/round_10.json",
+      "round": 10,
+      "prefer_stereo_rate": 0.5842175066312998,
+      "bbq_accuracy_proxy": 0.25538535184298705,
+      "fairness_risk": 0.6644160773941563,
+      "fdr": -0.0012340439310116746,
+      "delta_from_base": -0.006103648171705833
+    }
+  ]
+}
