@@ -20,7 +20,7 @@ The main analysis uses GPT-2, CrowS-Pairs, BBQ, and a bias-stress edit set to me
 - `scripts/`: experiment, evaluation, plotting, drift metric, and probe scripts
 - `results/`: experiment outputs, drift metrics, method summaries, and thesis figures
 - `mechanism_probe_outputs/`: supplementary probe outputs for parameter update norms and output-distribution changes
-- `paper_initial/`, `paper_final/`: literature/reference materials used during thesis writing
+- `paper_initial/`, `paper_final/`: literature indexes and thesis-writing notes. PDF files are kept locally but are not vendored in Git.
 - `3.16/`, `3.18/`, `3.19/`, `3.20/`: experiment logs and writing notes
 
 ## Key Metrics
@@ -32,5 +32,6 @@ The main analysis uses GPT-2, CrowS-Pairs, BBQ, and a bias-stress edit set to me
 
 ## Notes
 
-Large local runtime folders such as `.venv/` and temporary presentation/document assets are intentionally ignored. EasyEdit and RippleEdits are kept as repository links from the original working setup rather than vendoring their full source trees.
+Large local runtime folders such as `.venv/`, temporary presentation/document assets, cached Python files, and reference PDFs are intentionally ignored.
 
+This repository does not vendor the full EasyEdit or RippleEdits source trees. To rerun editing experiments, install or clone EasyEdit separately, then point the notebooks/scripts to that local EasyEdit checkout.
